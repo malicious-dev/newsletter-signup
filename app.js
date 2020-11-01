@@ -29,10 +29,10 @@ app.post('/', function (req, res){
     ]
   };
   const jsonData = JSON.stringify(data);
-  const url = "https://us17.api.mailchimp.com/3.0/lists/cb2aca812c";
+  const url = "https://usX.api.mailchimp.com/3.0/lists/{your unique id}";
   const options = {
     method: "POST",
-    auth: "harshit:2895c2612906285c27e4a719f786baed-us17"
+    auth: "{any username: auth id}"
   }
   const request = https.request(url, options, function(response){
 
@@ -54,5 +54,5 @@ app.listen(process.env.PORT || 3000, function(){
 })
 
 
-// mailchimp = d58a69ef1f46537f439bc86c5a464f6a-us17
-// uniqueid = cb2aca812c
+// mailchimp = auth id
+// uniqueid = mailchimp id
